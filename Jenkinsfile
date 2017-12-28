@@ -10,6 +10,7 @@ pipeline {
 			agent { label 'master' }
 			steps {
 				script {
+					docker.build()
 					def image = docker.image('shalabh250284/python-jnlp:1.0.1')
 					image.push('1.0.1')
 				}
