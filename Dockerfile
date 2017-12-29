@@ -18,6 +18,7 @@ COPY jenkins-slave /usr/local/bin/jenkins-slave
 RUN useradd -m -u 1000 jenkins
 
 RUN chmod a+rwx /home/jenkins
+RUN chmod a+rwx /usr/local/bin/jenkins-slave
 WORKDIR /home/jenkins
 USER jenkins
 
