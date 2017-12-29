@@ -1,7 +1,7 @@
 FROM amazonlinux:latest
 MAINTAINER "Shalabh Kumar"
 
-RUN yum install -y python27 shadow-utils
+RUN yum install -y python27 shadow-utils java-1.8.0-openjdk
 RUN curl -O https://bootstrap.pypa.io/get-pip.py \
     && python get-pip.py --user
 
