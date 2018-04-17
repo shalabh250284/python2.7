@@ -10,10 +10,10 @@ pipeline {
 			agent { label 'master' }
 			steps {
 				script {
-					sh 'docker build -t shalabh250284/python-jnlp:1.0.1 .'
-					def image = docker.image('shalabh250284/python-jnlp:1.0.1')
-					image.push('1.0.1')
-					image.push('latest')
+					//sh 'docker build -t shalabh250284/python-jnlp:1.0.1 .'
+					def image = docker.build('shalabh250284/python-jnlp:1.0.1')
+					image.push()
+					
 				}
             }
         }
